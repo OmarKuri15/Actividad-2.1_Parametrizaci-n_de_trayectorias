@@ -103,7 +103,7 @@ t=0:0.01:2*pi;
 x=17*cos(t)+7*cos(17+7*t);
 y=17*sin(t)-7*sin(17*t);
 
-comet (x,y)
+comet (x,y) 
 axis equal
 
 
@@ -154,4 +154,87 @@ x=sin(4*t);
 y=sin(5*t);
 
 comet (x,y)
+axis equal
+
+%---------------------------------------------
+%Parte 3: Trayectorias
+%---------------------------------------------
+
+%Trayectoria 1
+figure(14)
+
+x = [-1 0 1 0 -1];
+y = [ 0 1 0 -1 0];
+
+comet(x,y)
+axis equal
+xlim([-1.2 1.2])
+ylim([-1.2 1.2])
+
+
+%Trayectoria 2
+figure(15)
+
+x = [-1 -0.5 0.5 1 0.5 -0.5 -1];
+y = [ 0  0.85 0.85 0 -0.85 -0.85 0];
+
+comet(x,y)
+axis equal
+xlim([-1.2 1.2])
+ylim([-1 1])
+
+
+%Trayectoria 3
+figure(16)
+
+t = linspace(0, 2*pi, 13);
+
+x = cos(t);
+y = sin(t);
+
+comet(x,y)
+axis equal
+xlim([-1.2 1.2])
+ylim([-1.2 1.2])
+
+
+%Trayectoria 4
+figure(17)
+
+t = 0:0.001:pi;
+
+r = 50*cos(6*t);
+
+x = r.*cos(t);
+y = r.*sin(t);
+
+comet(x,y)
+axis equal
+
+
+%Trayectoria 5
+figure(18)
+
+t = 0:0.01:2*pi;
+
+r = 5*cos(8*t);
+
+x = r.*cos(t);
+y = r.*sin(t);
+
+comet(x,y)
+axis equal
+
+
+%Trayectoria 6
+figure(19)
+
+t = 0:0.001:2*pi;
+
+r = 5*cos(40*t);
+
+x = r.*cos(t);
+y = r.*sin(t);
+
+comet(x,y)
 axis equal
